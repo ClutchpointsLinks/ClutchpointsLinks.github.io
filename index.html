@@ -17,7 +17,7 @@
             redirectToAppWithType(getURLParameter('type'));
             
             setTimeout(function() {
-               window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8'
+                window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8'
             }, 250);
             
             break;
@@ -25,7 +25,7 @@
             redirectToAppWithType(getURLParameter('type'));
             
             setTimeout(function() {
-               window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints'
+                window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints'
             }, 250);
             
             break;
@@ -36,10 +36,10 @@
     
     function redirectToAppWithType(type) {
         if(type == 'stream') {
-            window.location.replace("clutchpoints://?type=" + type + "&matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId'));
+            window.location.replace("clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId'));
         }
         else if(type == 'news') {
-            window.location.replace("clutchpoints://?type=" + type + "&url=" + getURLParameter('url'));
+            window.location.replace("clutchpoints://" + type + "?url=" + getURLParameter('url'));
         }
     }
     
