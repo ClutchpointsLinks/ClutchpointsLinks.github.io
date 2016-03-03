@@ -41,6 +41,9 @@
         else if(type == 'news') {
             window.location.replace("clutchpoints://" + type + "?url=" + getURLParameter('url'));
         }
+        else {
+            window.location.replace("clutchpoints://");
+        }
     }
     
     function getURLParameter(name) {
