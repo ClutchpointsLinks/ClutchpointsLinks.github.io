@@ -1,0 +1,57 @@
+<!DOCTYPE html >
+
+<html>
+
+<head>
+    <script>
+    var OSName = "Unknown OS";
+    if (/Win/.test(navigator.userAgent)) OSName = "Windows";
+    if (/Windows Phone/.test(navigator.userAgent)) OSName = "Windows Phone";
+    if (/Linux/.test(navigator.userAgent)) OSName = "Linux";
+    if (/Android/.test(navigator.userAgent)) OSName = "Android";
+    if (/Mac/.test(navigator.userAgent)) OSName = "MacOS";
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) OSName = "iOS";
+    
+    switch (OSName) {
+        case 'iOS' :
+            redirectToAppWithType(getURLParameter('type'));
+            
+            setTimeout(function() {
+               window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8'
+            }, 250);
+            
+            break;
+        case 'Android' :
+            redirectToAppWithType(getURLParameter('type'));
+            
+            setTimeout(function() {
+               window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints'
+            }, 250);
+            
+            break;
+        default :
+            window.location.replace("http://app.clutchpoints.com");
+            break;
+    }
+    
+    function redirectToAppWithType(type) {
+        if(type == 'stream') {
+            window.location.replace("clutchpoints://?type=" + type + "&matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId'));
+        }
+        else if(type == 'news') {
+            window.location.replace("clutchpoints://?type=" + type + "&url=" + getURLParameter('url'));
+        }
+    }
+    
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+    }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+
+</body>
+
+</html>
