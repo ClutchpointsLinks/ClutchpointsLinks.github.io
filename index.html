@@ -169,16 +169,6 @@
 
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
   </div>
 </section>
 
@@ -207,13 +197,7 @@
                 
                 break;
             case 'Android' :
-                
                 redirectToAppWithType(getURLParameter('type'));
-                
-                // setTimeout(function() {
-                //     window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints';
-                // }, 250);
-                
                 break;
             default :
                 // document.location = 'http://app.clutchpoints.com';
@@ -227,9 +211,9 @@
             else if(type == 'news') {
                 window.location =  "clutchpoints://" + type + "?url=" + getURLParameter('url');
             }
-            else {
-                window.location = "clutchpoints://";
-            }
+            // else {
+            //     window.location = "clutchpoints://";
+            // }
         }
         
         function getURLParameter(name) {
@@ -287,5 +271,15 @@
           controller.recursiveLoad();
           controller.recursiveReady();
         })();
+    </script>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-70082552-3', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
