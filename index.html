@@ -1,63 +1,291 @@
-<!DOCTYPE html >
-
+<!DOCTYPE HTML>
 <html>
-
 <head>
-    <script>
-    var OSName = "Unknown OS";
-    if (/Win/.test(navigator.userAgent)) OSName = "Windows";
-    if (/Windows Phone/.test(navigator.userAgent)) OSName = "Windows Phone";
-    if (/Linux/.test(navigator.userAgent)) OSName = "Linux";
-    if (/Android/.test(navigator.userAgent)) OSName = "Android";
-    if (/Mac/.test(navigator.userAgent)) OSName = "MacOS";
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) OSName = "iOS";
-    
-    switch (OSName) {
-        case 'iOS' :
-            
-            redirectToAppWithType(getURLParameter('type'));
-            
-            // setTimeout(function(){
-                // document.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
-                // document.location = 'http://app.clutchpoints.com';
-            // }, 300);
-            
-            break;
-        case 'Android' :
-            redirectToAppWithType(getURLParameter('type'));
-            
-            setTimeout(function() {
-                window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints';
-            }, 250);
-            
-            break;
-        default :
-            document.location = 'http://app.clutchpoints.com';
-            break;
+  <title>ClutchPoints - Unlock your NBA World</title>
+    <link rel="stylesheet" href="https://d2kfjaekmjmy1l.cloudfront.net/websites-public-v7ede147e55fc.css" data-bundle="websites-public">
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://lh3.googleusercontent.com/nJyieMQXmg9fNyFR7l6itSZHajtduEgNZ3to3yq6-Kc3ysXDk3eIggQQh5im_FhgYBr8Fah5z4KgnCjTLc9zLJw8F8Hd" rel="shortcut icon" type="image/x-icon">
+
+<meta name="description" content="Revolutionary way to visually experience everything happening during an NBA game. From scores to stats to news and social - right as it happens. Get it now!">
+<meta name="keywords" content="NBA,clutch,points,scores,statistics,basketball,Cavs,Lakers,LeBron,Kobe,Westbrook,Durant,Bulls,Curry">
+
+<!-- Facebook -->
+<meta property="og:site_name" content="ClutchPoints">
+<meta property="og:title" content="Unlock your NBA World">
+<meta property="og:description" content="Revolutionary way to visually experience everything happening during an NBA game. From scores to stats to news and social - right as it happens. Get it now!">
+<meta property="og:url" content="http://app.clutchpoints.com">
+<meta property="og:image" content="https://lh3.googleusercontent.com/nJyieMQXmg9fNyFR7l6itSZHajtduEgNZ3to3yq6-Kc3ysXDk3eIggQQh5im_FhgYBr8Fah5z4KgnCjTLc9zLJw8F8Hd">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="app">
+<meta name="twitter:title" content="ClutchPoints - Unlock your NBA World">
+<meta name="twitter:description" content="Revolutionary way to visually experience everything happening during an NBA game. From scores to stats to news and social - right as it happens. Get it now!">
+<meta name="twitter:image:src" content="https://lh3.googleusercontent.com/nJyieMQXmg9fNyFR7l6itSZHajtduEgNZ3to3yq6-Kc3ysXDk3eIggQQh5im_FhgYBr8Fah5z4KgnCjTLc9zLJw8F8Hd">
+<meta name="twitter:domain" content="http://app.clutchpoints.com">
+<meta name="twitter:app:name:iphone" content="ClutchPoints">
+<meta name="twitter:app:id:iphone" content="1044413150">
+<meta name="twitter:app:name:ipad" content="ClutchPoints">
+<meta name="twitter:app:id:ipad" content="1044413150">
+<meta name="twitter:app:name:googleplay" content="ClutchPoints">
+<meta name="twitter:app:id:googleplay" content="com.clutchpoints">
+
+<!-- Apple Smart App Banner -->
+<meta name="apple-itunes-app"
+  content="app-id=1044413150,
+  affiliate-data=1001l5Yq">
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Raleway:400,100,200,300,500,600,700,800,900" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+    #public-landing-page .container {
+      font-family: 'Open Sans', sans-serif !important;
     }
-    
-    function redirectToAppWithType(type) {
-        if(type == 'stream') {
-            window.location = "clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId');
-        }
-        else if(type == 'news') {
-            window.location =  "clutchpoints://" + type + "?url=" + getURLParameter('url');
-        }
-        else {
-            window.location = "clutchpoints://";
-        }
+    #public-landing-page.template-1 .hero,
+    #public-landing-page.template-2 .hero,
+    #public-landing-page.template-3 .hero,
+    #public-landing-page.template-4 .hero,
+    #public-landing-page.template-7 .hero,
+    #public-landing-page.template-8 .hero .graphic,
+    #public-landing-page.template-9 .bg-color,
+    #public-landing-page .store-badge-white-text,
+    #public-landing-page.template-1color .hero,
+    #public-landing-page.template-2color .hero {
+      background: #273542;
     }
-    
-    function getURLParameter(name) {
-      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+    #public-landing-page.template-5 .hero h2,
+    #public-landing-page.template-6 .hero h1,
+    #public-landing-page.template-8 .hero,
+    #public-landing-page.template-9 .hero h2,
+    #public-landing-page .hero .btn,
+    #public-landing-page .navbar .btn,
+    #public-landing-page .navbar.invert-navbar a,
+    #public-landing-page footer a,
+    #public-landing-page .benefit-header {
+      color: #273542;
     }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="Cache-control" content="NO-CACHE">
+    #public-landing-page .btn.btn-primary.btn-primary-invert,
+    #public-landing-page .navbar.invert-navbar .btn.btn-primary,
+    #public-landing-page .navbar .navbar-collapse.in .btn.btn-primary,
+    #public-landing-page .navbar .navbar-toggle .icon-bar,
+    #public-landing-page .download-text {
+      color: white;
+      background-color: #273542;
+    }
+
+
+    #public-landing-page.template-1 .hero,
+    #public-landing-page.template-2 .hero,
+    #public-landing-page.template-4 .hero {
+      background-image: url('https://lh3.googleusercontent.com/4DO3JubHGvJGTCYRbkM93de9B19lWcjCzPv77l8Lj7NyNnlVgyyxbENTcd_FMKlgMOy26L3HuPcQGlNNF1_2tqjzWn2dUEQ=s1600');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    #public-landing-page .hero .blurred-cover .darken {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2px;
+      background: rgba(0,0,0,.3);
+    }
+
+  @media screen and (max-width: 767px) {
+      #public-landing-page.template-9 .hero h1 {
+        background: #273542;
+      }
+  }
+
+</style>
 </head>
+<body><div id="skit-controller"><div id="public-landing-page"
+  class="
+    template-1
+    full-screen
+    centered
+  ">
 
-<body>
+  <section class="hero">
+    <div class="blurred-cover">
+      <div class="darken"></div>
+    </div>
+  <div class="container">
+<!--    <nav class="navbar navbar-default">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="navbar-header">-->
+<!--        <a class="navbar-brand visible-xs" href="/">-->
+<!--          <img alt="ClutchPoints" src="https://lh3.googleusercontent.com/nJyieMQXmg9fNyFR7l6itSZHajtduEgNZ3to3yq6-Kc3ysXDk3eIggQQh5im_FhgYBr8Fah5z4KgnCjTLc9zLJw8F8Hd" class="app-icon">-->
+<!--        </a>-->
+<!--    </div>-->
+
+<!--    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+<!--      <ul class="nav navbar-nav navbar-right">-->
+<!--        <li class="visible-xs"><a href="/">Home Page</a></li>-->
+<!--          <li class="visible-xs"><a href="https://itunes.apple.com/app/id1044413150?mt&#x3D;8" target="_blank">Download from App Store</a></li>-->
+<!--          <li class="visible-xs"><a href="https://play.google.com/store/apps/details?id&#x3D;com.clutchpoints" target="_blank">Download from Google Play</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+      <div class="row">
+        <div class="col-sm-5 col-xs-12 text-center">
+              <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="https://launchkit-io.imgix.net/devices/iPhone6White.png?w&#x3D;750&amp;h&#x3D;1334&amp;mark&#x3D;https%3A%2F%2Flh3.googleusercontent.com%2F7hTYMi2PIuJd7bFjR-0xFokCzfyK52qlmlV4fMdi59PlvabOJd-zyPZIwDgbKnE3gHQpqiqKIs6S8GG_1KRVmbP_xj_l&amp;markh&#x3D;970&amp;markalign&#x3D;center%2Cmiddle" class="screenshot" alt="Screenshot of ClutchPoints">
+        </div>
+        <div class="item">
+          <img src="https://launchkit-io.imgix.net/devices/iPhone6White.png?w&#x3D;750&amp;h&#x3D;1334&amp;mark&#x3D;https%3A%2F%2Flh3.googleusercontent.com%2Fo_ahr2dUnMQMxg7tUwamrq3rrlyNsdtPpug0B1BJ6JNHt5Z-Bi1RmVjjwxRwZnI0jj2fDHdlWLDngSnbw97_BRVtU-2V8A&amp;markh&#x3D;970&amp;markalign&#x3D;center%2Cmiddle" class="screenshot" alt="Screenshot of ClutchPoints">
+        </div>
+        <div class="item">
+          <img src="https://launchkit-io.imgix.net/devices/iPhone6White.png?w&#x3D;750&amp;h&#x3D;1334&amp;mark&#x3D;https%3A%2F%2Flh3.googleusercontent.com%2F40MfNs9Bou3NhetkcZ6jpOWD4eiiaX7Sonb-eKBn50dhVqNVbqLGzBUiQd7eDELcrI6VT_n239ahrcQqm5XQHz9wP8dC3g&amp;markh&#x3D;970&amp;markalign&#x3D;center%2Cmiddle" class="screenshot" alt="Screenshot of ClutchPoints">
+        </div>
+        <div class="item">
+          <img src="https://launchkit-io.imgix.net/devices/iPhone6White.png?w&#x3D;750&amp;h&#x3D;1334&amp;mark&#x3D;https%3A%2F%2Flh3.googleusercontent.com%2F2wNjsD3OeUoYdnk-JFzLWn47qzFrbDVqZmgkaQ_RrcYmdnbePSp4Wu3E52KzZbmUXOff0kiYbLKkdXQEGJjSXvfmGEAvKw&amp;markh&#x3D;970&amp;markalign&#x3D;center%2Cmiddle" class="screenshot" alt="Screenshot of ClutchPoints">
+        </div>
+        <div class="item">
+          <img src="https://launchkit-io.imgix.net/devices/iPhone6White.png?w&#x3D;750&amp;h&#x3D;1334&amp;mark&#x3D;https%3A%2F%2Flh3.googleusercontent.com%2F-gh8pv07ASUSMghfXuYWafVBEBmOhlWjfAIryH4jdVuJWmXx6XtHeUL-4KdQHbskvKXGrOAikdLP4NoVYFm9lcF4ZDU4KOk&amp;markh&#x3D;970&amp;markalign&#x3D;center%2Cmiddle" class="screenshot" alt="Screenshot of ClutchPoints">
+        </div>
+    </div>
+  </div>
+        </div>
+        <div class="col-sm-7 col-xs-12">
+          <h1>  ClutchPoints
+</h1>
+          <h2>Unlock your NBA World</h2>
+            <p>Revolutionary way to visually experience everything happening during an NBA game. From scores to stats to news and social - right as it happens. Get it now!</p>
+            <a href="https://itunes.apple.com/app/id1044413150?mt&#x3D;8" class="app-store-badge" target="_blank">
+    <img src="https://d2kfjaekmjmy1l.cloudfront.net/images/websites/public/app-store-black-on-color@2x-vd3eb32e86e4d.png">
+  </a>
+
+  <a href="https://play.google.com/store/apps/details?id&#x3D;com.clutchpoints" class="google-play-badge" target="_blank">
+    <img src="https://d2kfjaekmjmy1l.cloudfront.net/images/websites/public/google-play-black-on-color@2x-v89993229953f.png">
+  </a>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+</section>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</div>
+    <script>
+        var OSName = "Unknown OS";
+        if (/Win/.test(navigator.userAgent)) OSName = "Windows";
+        if (/Windows Phone/.test(navigator.userAgent)) OSName = "Windows Phone";
+        if (/Linux/.test(navigator.userAgent)) OSName = "Linux";
+        if (/Android/.test(navigator.userAgent)) OSName = "Android";
+        if (/Mac/.test(navigator.userAgent)) OSName = "MacOS";
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) OSName = "iOS";
+        
+        switch (OSName) {
+            case 'iOS' :
+                
+                redirectToAppWithType(getURLParameter('type'));
+                
+                // setTimeout(function(){
+                //     document.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
+                // }, 250);
+                
+                break;
+            case 'Android' :
+                
+                redirectToAppWithType(getURLParameter('type'));
+                
+                // setTimeout(function() {
+                //     window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints';
+                // }, 250);
+                
+                break;
+            default :
+                // document.location = 'http://app.clutchpoints.com';
+                break;
+        }
+        
+        function redirectToAppWithType(type) {
+            if(type == 'stream') {
+                window.location = "clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId');
+            }
+            else if(type == 'news') {
+                window.location =  "clutchpoints://" + type + "?url=" + getURLParameter('url');
+            }
+            else {
+                window.location = "clutchpoints://";
+            }
+        }
+        
+        function getURLParameter(name) {
+          return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+    </script>
+
+    <script>
+        window.skit = (function() {
+          var objects = {};
+          var modules = {};
+          function define(resourcePath, deps, fn) {
+            modules[resourcePath] = {deps: deps, fn: fn};
+          }
+          function load(resourcePath) {
+            if (!(resourcePath in objects)) {
+              if (resourcePath in modules) {
+                var module = modules[resourcePath];
+                var args = [];
+                for (var i = 0; i < module.deps.length; i++) {
+                  args.push(load(module.deps[i]));
+                }
+                objects[resourcePath] = module.fn.apply(window, args);
+              } else {
+                objects[resourcePath] = null;
+              }
+            }
+            return objects[resourcePath];
+          }
+          return {
+            define: define,
+            modules: modules,
+            env: {"productionAPI":true,"appEngineHost":"https://launchkit-images.appspot.com/","publicRoot":"public_hosted"},
+            load: load
+          };
+        })();
+    </script>
     
+    <script src="https://d2kfjaekmjmy1l.cloudfront.net/websites-public-v10cea33f8c7d.js" data-bundle="websites-public"></script>
+    
+    <script>
+        (function() {
+            var netproxy = skit.load("skit.platform.netproxy:js");
+              netproxy.__register__("lk", {"name":"lk","csrfToken":"a7o5qKr7gHTnc1sNn4C9gQ=="});
+        
+          var ControllerKlass = skit.load("public_hosted.HostedWebsite:js");
+          var controller = new ControllerKlass({});
+        
+          var controllerProperties = {"domain":"app.clutchpoints.com","website":{"facebookLink":"http://facebook.com/clutchpoints","domain":"app.clutchpoints.com","disableLkBranding":null,"termsLink":"","appName":"ClutchPoints","images":{"screenshots":{"iPhone":[{"url":"https://lh3.googleusercontent.com/7hTYMi2PIuJd7bFjR-0xFokCzfyK52qlmlV4fMdi59PlvabOJd-zyPZIwDgbKnE3gHQpqiqKIs6S8GG_1KRVmbP_xj_l","imageId":"cQ02IpfzumM"},{"url":"https://lh3.googleusercontent.com/o_ahr2dUnMQMxg7tUwamrq3rrlyNsdtPpug0B1BJ6JNHt5Z-Bi1RmVjjwxRwZnI0jj2fDHdlWLDngSnbw97_BRVtU-2V8A","imageId":"ApfMTO9JaKU"},{"url":"https://lh3.googleusercontent.com/40MfNs9Bou3NhetkcZ6jpOWD4eiiaX7Sonb-eKBn50dhVqNVbqLGzBUiQd7eDELcrI6VT_n239ahrcQqm5XQHz9wP8dC3g","imageId":"h9EAmVX0MXs"},{"url":"https://lh3.googleusercontent.com/2wNjsD3OeUoYdnk-JFzLWn47qzFrbDVqZmgkaQ_RrcYmdnbePSp4Wu3E52KzZbmUXOff0kiYbLKkdXQEGJjSXvfmGEAvKw","imageId":"ySpFUxXmwIc"},{"url":"https://lh3.googleusercontent.com/-gh8pv07ASUSMghfXuYWafVBEBmOhlWjfAIryH4jdVuJWmXx6XtHeUL-4KdQHbskvKXGrOAikdLP4NoVYFm9lcF4ZDU4KOk","imageId":"hF0nvNX4jyw"}]},"background":{"url":"https://lh3.googleusercontent.com/4DO3JubHGvJGTCYRbkM93de9B19lWcjCzPv77l8Lj7NyNnlVgyyxbENTcd_FMKlgMOy26L3HuPcQGlNNF1_2tqjzWn2dUEQ","id":"lYVgGpQWeMI"},"icon":{"url":"https://lh3.googleusercontent.com/nJyieMQXmg9fNyFR7l6itSZHajtduEgNZ3to3yq6-Kc3ysXDk3eIggQQh5im_FhgYBr8Fah5z4KgnCjTLc9zLJw8F8Hd","id":"RpklGx8MvZc"}},"blogLink":"","supportLink":"","longDescription":"ClutchPoints is a new and unique way to visually experience everything happening during an NBA game - from scores to stats to news - right as it happens, right in the palm of your hand.","font":"Open Sans","playStoreId":"com.clutchpoints","isPro":null,"waitingListLink":"","primaryColor":"#273542","keywords":"NBA,clutch,points,scores,statistics,basketball,Cavs,Lakers,LeBron,Kobe,Westbrook,Durant,Bulls,Curry","googleAnalyticsId":"","itunesProviderToken":null,"shortDescription":"Revolutionary way to visually experience everything happening during an NBA game. From scores to stats to news and social - right as it happens. Get it now!","id":"a7eoD2RcSvE","loginLink":"","privacyLink":"","itunesCampaignToken":null,"author":"Adnrey Kyashkin","tagline":"Unlock your NBA World","frameScreenshots":"white","customCss":null,"itunesId":"1044413150","pressLink":"","instagramLink":"","customLinkLabel":null,"twitterLink":"http://twitter.com/clutchpointsapp","template":"1","mixpanelBadge":null,"customLink":null,"homeUrl":"/"}};
+          for (var k in controllerProperties) {
+            controller[k] = controllerProperties[k];
+          }
+        
+          window.skit.controller = controller;
+          controller.recursiveLoad();
+          controller.recursiveReady();
+        })();
+    </script>
 </body>
-
-</html>
