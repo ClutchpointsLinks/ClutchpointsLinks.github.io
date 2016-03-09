@@ -15,11 +15,13 @@
     switch (OSName) {
         case 'iOS' :
             
-            setTimeout(function() {
-                window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
-            }, 1000);
-            
             redirectToAppWithType(getURLParameter('type'));
+            
+            setTimeout(function(){
+                if(confirm('You do not seem to have ClutchPoints installed, do you want to go download it now?')){
+                    document.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
+                }
+            }, 300);
             
             break;
         case 'Android' :
@@ -37,13 +39,13 @@
     
     function redirectToAppWithType(type) {
         if(type == 'stream') {
-            window.location.replace("clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId'));
+            window.location = "clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId');
         }
         else if(type == 'news') {
-            window.location.replace("clutchpoints://" + type + "?url=" + getURLParameter('url'));
+            window.location =  "clutchpoints://" + type + "?url=" + getURLParameter('url');
         }
         else {
-            window.location.replace("clutchpoints://");
+            window.location = "clutchpoints://";
         }
     }
     
@@ -55,7 +57,7 @@
 </head>
 
 <body>
-HELLO1000
+HELLO
 </body>
 
 </html>
