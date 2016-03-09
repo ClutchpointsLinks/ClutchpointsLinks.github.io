@@ -14,18 +14,19 @@
     
     switch (OSName) {
         case 'iOS' :
-            redirectToAppWithType(getURLParameter('type'));
             
             setTimeout(function() {
-                window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8'
+                window.location.replace('https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8');
             }, 250);
+            
+            redirectToAppWithType(getURLParameter('type'));
             
             break;
         case 'Android' :
             redirectToAppWithType(getURLParameter('type'));
             
             setTimeout(function() {
-                window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints'
+                window.location = 'https://play.google.com/store/apps/details?id=com.clutchpoints';
             }, 250);
             
             break;
