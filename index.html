@@ -213,7 +213,7 @@
         
         function redirectToAppWithType(type) {
             if(type == 'stream') {
-                window.location = "clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId');
+                window.location = "clutchpoints://" + type + "?matchId=" + getURLParameter('matchId') + "&streamId=" + getURLParameter('streamId') + "&sport=" + getURLParameter('sport');
             }
             else if(type == 'news') {
                 window.location =  "clutchpoints://" + type + "?url=" + getURLParameter('url');
