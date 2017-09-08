@@ -180,7 +180,7 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </div>
     <script>
@@ -197,13 +197,16 @@
                 
                 redirectToAppWithType(getURLParameter('type'));
                 
-                // setTimeout(function(){
-                //     document.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
-                // }, 250);
+                setTimeout(function(){
+                  window.location = 'https://itunes.apple.com/us/app/clutchpoints-unlock-sports/id1044413150?mt=8';
+                }, 250);
                 
                 break;
             case 'Android' :
                 redirectToAppWithType(getURLParameter('type'));
+                setTimeout(function() {
+                  window.location = 'market://details?id=com.clutchpoints';
+                }, 250);
                 break;
             default :
                 // document.location = 'http://app.clutchpoints.com';
