@@ -212,6 +212,8 @@
         if (/Android/.test(navigator.userAgent)) OSName = "Android";
         if (/Mac/.test(navigator.userAgent)) OSName = "MacOS";
         if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) OSName = "iOS";
+      
+        console.log(OSName);
         
         switch (OSName) {
             case 'iOS' :
