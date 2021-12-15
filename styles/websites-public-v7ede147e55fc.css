@@ -8805,6 +8805,14 @@ button.close {
   max-height: 53px;
   margin-bottom: 10px;
 }
+@media (max-width: 375px) {
+  #public-landing-page .hero .app-store-badge img {
+    max-height: 60px;
+  }
+  #public-landing-page a.app-store-badge {
+    margin-right: 0px !important;
+  }
+}
 #public-landing-page .hero .app-store-badge .store-badge-white-text img,
 #public-landing-page .hero .google-play-badge .store-badge-white-text img {
   max-height: 59px;
